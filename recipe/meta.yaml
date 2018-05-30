@@ -14,8 +14,10 @@ build:
   
 requirements:
   build:
-    - toolchain
+    - {{ compiler('cxx') }}
     - cmake
+
+  host:
     - boost
     - eigen
     - piranha 0.11
