@@ -16,19 +16,20 @@ requirements:
   build:
     - toolchain
     - cmake
-    - boost 1.66.*
+    - boost
     - eigen
-    - piranha 0.10
+    - piranha 0.11
+    - mppp 0.11
     - audi {{ version }}
     - python
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
+    - gmp 
+    - mpfr
 
   run:
-    - boost 1.66.*
+    - boost 
     - python
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
+    - gmp 
+    - mpfr
 
 about:
   home: http://darioizzo.github.io/audi/
