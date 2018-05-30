@@ -1,0 +1,14 @@
+boost:
+- 1.66.0
+mpfr:
+- '4'
+pin_run_as_build:
+  boost:
+    max_pin: x.x.x
+  mpfr:
+    max_pin: x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- '2.7'

@@ -14,14 +14,16 @@ Summary: Python exposition of the audi C++ library: Algebra of Taylor truncated 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyaudi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyaudi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyaudi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyaudi-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pyaudi-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pyaudi-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pyaudi-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pyaudi-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyaudi/badges/version.svg)](https://anaconda.org/conda-forge/pyaudi)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyaudi/badges/downloads.svg)](https://anaconda.org/conda-forge/pyaudi)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyaudi-green.svg)](https://anaconda.org/conda-forge/pyaudi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyaudi.svg)](https://anaconda.org/conda-forge/pyaudi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyaudi.svg)](https://anaconda.org/conda-forge/pyaudi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyaudi.svg)](https://anaconda.org/conda-forge/pyaudi) |
 
 Installing pyaudi
 =================
