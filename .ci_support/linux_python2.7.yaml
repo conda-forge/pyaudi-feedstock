@@ -1,5 +1,7 @@
 boost:
 - 1.66.0
+cxx_compiler:
+- toolchain_cxx
 mpfr:
 - '4'
 pin_run_as_build:
