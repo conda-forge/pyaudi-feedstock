@@ -1,9 +1,11 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 boost:
-- 1.66.0
+- 1.67.0
 cxx_compiler:
 - toolchain_cxx
+gmp:
+- '6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
@@ -13,6 +15,8 @@ mpfr:
 pin_run_as_build:
   boost:
     max_pin: x.x.x
+  gmp:
+    max_pin: x
   mpfr:
     max_pin: x
   python:
