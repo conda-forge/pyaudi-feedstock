@@ -24,7 +24,7 @@ requirements:
     - mppp 0.12
     - audi {{ version }}
     - python
-    - gmp 
+    - gmp
     - mpfr
 
   run:
