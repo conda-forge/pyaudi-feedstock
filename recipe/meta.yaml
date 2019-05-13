@@ -1,4 +1,4 @@
-{% set version = "1.6.3" %}
+{% set version = "1.6.5" %}
 
 package:
   name: pyaudi
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz 
-  sha256: 291921b412efde8a63112b941361ee7c58394444f28d911d3c4861ea9f623157
+  sha256: 54dbfbdbe3d473b043560cb8b6943d2fd3baeb73fc18172991b206fc1b41e2ad
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   
 requirements:
