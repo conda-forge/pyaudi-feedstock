@@ -23,5 +23,5 @@ cmake \
 make
 
 ctest
-
+ 
 make install
