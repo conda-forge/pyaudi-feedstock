@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ "$(uname)" == "Darwin" ]]; then
-    export ENABLE_MPPP=no
-else
-    export ENABLE_MPPP=yes
-fi
-
 mkdir build
 cd build
+
+if [[ "$target_platform" == linux-64 ]]; then
+    LDFLAGS="-lrt ${LDFLAGS}"
+fi
 
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
@@ -17,11 +15,8 @@ cmake \
     -DAUDI_BUILD_MAIN=no \
     -DAUDI_BUILD_TESTS=no \
     -DAUDI_BUILD_PYAUDI=yes \
-    -DAUDI_WITH_MPPP=$ENABLE_MPPP \
     ..
 
-make
+make -j${CPU_COUNT} VERBOSE=1
 
-ctest
- 
 make install
