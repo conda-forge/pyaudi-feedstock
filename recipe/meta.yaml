@@ -27,6 +27,7 @@ requirements:
     - mppp
     - audi {{ version }}
     - python
+    - pybind11
 
   run:
     - boost
