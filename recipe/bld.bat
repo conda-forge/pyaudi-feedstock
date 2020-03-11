@@ -24,8 +24,8 @@ cmake ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
-    -DAUDI_BUILD_MAIN=no ^
     -DAUDI_BUILD_TESTS=no ^
+    -DAUDI_BUILD_AUDI=no ^
     -DAUDI_BUILD_PYAUDI=yes ^
     -Dpybind11_DIR=%PYAUDI_BUILD_DIR%/include/pybind11 ^
     ..
