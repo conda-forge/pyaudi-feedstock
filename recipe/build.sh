@@ -12,10 +12,11 @@ git clone https://github.com/pybind/pybind11.git
 cd pybind11
 mkdir build
 cd build
+pwd
 cmake \
     -DPYBIND11_TEST=NO \
-    -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
-    -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \
+    -DCMAKE_INSTALL_PREFIX=$SRC_DIR \
+    -DCMAKE_PREFIX_PATH=$SRC_DIR \
     ..
 make install
 cd ../..
@@ -26,10 +27,9 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DAUDI_BUILD_AUDI=no \
-    -DAUDI_BUILD_MAIN=no \
     -DAUDI_BUILD_TESTS=no \
     -DAUDI_BUILD_PYAUDI=yes \
-    -Dpybind11_DIR=$BUILD_PREFIX/include/pybind11 \
+    -Dpybind11_DIR=$SRC_DIR/include/pybind11 \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
