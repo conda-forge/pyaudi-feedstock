@@ -13,7 +13,7 @@ cmake ^
     -DCMAKE_INSTALL_PREFIX=%PYAUDI_BUILD_DIR% ^
     -DCMAKE_PREFIX_PATH=%PYAUDI_BUILD_DIR% ^
     ..
-make install
+cmake --build . --target install
 cd ../..
 
 cmake ^
