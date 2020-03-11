@@ -14,6 +14,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
     mkdir build
     cd build
     cmake .. -DPYBIND11_TEST=NO \
+        -DCMAKE_INSTALL_PREFIX=\usr\local \
+        -DCMAKE_PREFIX_PATH=\usr\local \
     make install
 fi
 
