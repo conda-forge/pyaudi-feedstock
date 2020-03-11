@@ -9,17 +9,16 @@ fi
 
 
 git clone https://github.com/pybind/pybind11.git
-echo pwd
-ls
 cd pybind11
 mkdir build
 cd build
 cmake \
     -DPYBIND11_TEST=NO \
-    -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
-    -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    -DCMAKE_PREFIX_PATH=/usr/local \
     ..
 make install
+cd ../..
 
 
 cmake \
@@ -30,6 +29,7 @@ cmake \
     -DAUDI_BUILD_MAIN=no \
     -DAUDI_BUILD_TESTS=no \
     -DAUDI_BUILD_PYAUDI=yes \
+    -Dpybind11_DIR=/usr/local/include/pybind11 \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
