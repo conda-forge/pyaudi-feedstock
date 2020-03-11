@@ -10,12 +10,14 @@ fi
 # On OSX we install pybind from head as a workaround to the current relase not working on c++17.
 if [[ "$(uname)" == "Darwin" ]]; then
     git clone https://github.com/pybind/pybind11.git
+    echo pwd
+    ls
     cd pybind11
     mkdir build
     cd build
     cmake .. -DPYBIND11_TEST=NO \
-        -DCMAKE_INSTALL_PREFIX=\usr\local \
-        -DCMAKE_PREFIX_PATH=\usr\local \
+        -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
+        -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \
     make install
 fi
 
