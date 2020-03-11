@@ -17,7 +17,7 @@ cd build
 cmake \
     -DPYBIND11_TEST=NO \
     -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
-    -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \\
+    -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \
     ..
 make install
 
