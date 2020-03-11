@@ -2,6 +2,7 @@
 
 mkdir build
 cd build
+export PYAUDI_BUILD_DIR=`pwd`
 
 if [[ "$target_platform" == linux-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
@@ -15,8 +16,8 @@ cd build
 pwd
 cmake \
     -DPYBIND11_TEST=NO \
-    -DCMAKE_INSTALL_PREFIX=$SRC_DIR \
-    -DCMAKE_PREFIX_PATH=$SRC_DIR \
+    -DCMAKE_INSTALL_PREFIX=$PYAUDI_BUILD_DIR \
+    -DCMAKE_PREFIX_PATH=$PYAUDI_BUILD_DIR \
     ..
 make install
 cd ../..
@@ -29,7 +30,7 @@ cmake \
     -DAUDI_BUILD_AUDI=no \
     -DAUDI_BUILD_TESTS=no \
     -DAUDI_BUILD_PYAUDI=yes \
-    -Dpybind11_DIR=$SRC_DIR/include/pybind11 \
+    -Dpybind11_DIR=$PYAUDI_BUILD_DIR/include/pybind11 \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
