@@ -27,7 +27,7 @@ cmake ^
     -DAUDI_BUILD_TESTS=no ^
     -DAUDI_BUILD_AUDI=no ^
     -DAUDI_BUILD_PYAUDI=yes ^
-    -Dpybind11_DIR=%PYAUDI_BUILD_DIR%/include/pybind11 ^
+    -Dpybind11_DIR=%PYAUDI_BUILD_DIR%/share/cmake/pybind11/ ^
     ..
 
 cmake --build . -- -v
