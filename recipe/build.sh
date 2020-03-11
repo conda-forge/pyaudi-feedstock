@@ -7,19 +7,20 @@ if [[ "$target_platform" == linux-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
-# On OSX we install pybind from head as a workaround to the current relase not working on c++17.
-if [[ "$(uname)" == "Darwin" ]]; then
-    git clone https://github.com/pybind/pybind11.git
-    echo pwd
-    ls
-    cd pybind11
-    mkdir build
-    cd build
-    cmake .. -DPYBIND11_TEST=NO \
-        -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
-        -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \
-    make install
-fi
+
+git clone https://github.com/pybind/pybind11.git
+echo pwd
+ls
+cd pybind11
+mkdir build
+cd build
+cmake \
+    -DPYBIND11_TEST=NO \
+    -DCMAKE_INSTALL_PREFIX=$BUILD_PREFIX \
+    -DCMAKE_PREFIX_PATH=$BUILD_PREFIX \\
+    ..
+make install
+
 
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
