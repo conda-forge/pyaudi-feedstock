@@ -1,8 +1,6 @@
 mkdir build
 cd build
 
-$Env:PYAUDI_BUILD_DIR=pwd
-
 git clone https://github.com/pybind/pybind11.git
 cd pybind11
 mkdir build
