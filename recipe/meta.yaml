@@ -21,6 +21,7 @@ requirements:
     - ninja      # [win]
 
   host:
+    - python
     - boost
     - eigen
     - obake-devel
