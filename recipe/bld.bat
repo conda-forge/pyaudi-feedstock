@@ -10,8 +10,8 @@ cd build
 cmake ^
     -G "Ninja" ^
     -DPYBIND11_TEST=NO ^
-    -DCMAKE_INSTALL_PREFIX=%TEMP% ^
-    -DCMAKE_PREFIX_PATH=%TEMP% ^
+    -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+    -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     ..
 cmake --build . --target install
 cd ../..
@@ -27,7 +27,7 @@ cmake ^
     -DAUDI_BUILD_TESTS=no ^
     -DAUDI_BUILD_AUDI=no ^
     -DAUDI_BUILD_PYAUDI=yes ^
-    -Dpybind11_DIR=%TEMP%/share/cmake/pybind11 ^
+    -Dpybind11_DIR=%LIBRARY_PREFIX%/share/cmake/pybind11 ^
     ..
 
 cmake --build . -- -v
