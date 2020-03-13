@@ -10,6 +10,7 @@ cmake ^
     -DPYBIND11_TEST=NO ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
     -DCMAKE_PREFIX_PATH=%PREFIX% ^
+    -DCMAKE_BUILD_TYPE=Release ^
     ..
 cmake --build . --target install
 cd ../..
@@ -25,6 +26,7 @@ cmake ^
     -DAUDI_BUILD_AUDI=no ^
     -DAUDI_BUILD_PYAUDI=yes ^
     -Dpybind11_DIR=%PREFIX%/share/cmake/pybind11/ ^
+    -DCMAKE_BUILD_TYPE=Release ^
     ..
 
 cmake --build . -- -v
