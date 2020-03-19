@@ -1,42 +1,44 @@
-{% set version = "1.7" %}
+{% set version = "1.8" %}
 
 package:
   name: pyaudi
   version: {{ version }}
 
 source:
-  url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz 
-  sha256: ca91599a11796f56739a1310838cda976b9882eab5565965cc0b14923f3e5488
+  url: https://github.com/darioizzo/audi/archive/v{{ version }}.tar.gz
+  sha256: d3615b9dd1d6e0ba09af258ace9b03fc8e167e4f40640e670386470f63bd643a
 
 build:
   number: 2
-  skip: true  # [win and vc<14]
-  
+  skip: true  # [py<36]
+
 requirements:
   build:
-    - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - clang      # [win]
-    - ninja      # [win]
+    - cmake 
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('cxx') }}  # [not win]
+    - clang  # [win]
+    - ninja  # [win]
 
   host:
+    - python
     - boost
     - eigen
     - obake-devel
     - mppp
     - audi {{ version }}
-    - python
+    #- pybind11
 
   run:
-    - boost 
+    - boost
     - python
 
 about:
   home: http://darioizzo.github.io/audi/
   license: GPL v3 and LGPL v3
   license_file: COPYING.lgpl3
-  summary: 'Python exposition of the audi C++ library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation, Differential Intelligence, Taylor Models, etc.)'
+  summary: 'Python exposition of the audi C++ library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation,
+    Differential Intelligence, Taylor Models, etc.)'
 
 extra:
   recipe-maintainers:
