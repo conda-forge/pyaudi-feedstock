@@ -3,6 +3,7 @@ cd build
 
 git clone https://github.com/pybind/pybind11.git
 cd pybind11
+git checkout 4f72ef846fe8453596230ac285eeaa0ce3278bb4
 mkdir build
 cd build
 cmake ^
