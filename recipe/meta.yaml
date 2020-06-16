@@ -27,7 +27,7 @@ requirements:
     - obake-devel
     - mppp
     - audi {{ version }}
-    #- pybind11
+    #- pybind11 
 
   run:
     - boost
