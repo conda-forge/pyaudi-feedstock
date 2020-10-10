@@ -22,7 +22,6 @@ requirements:
 
   host:
     - python
-    - boost
     - eigen
     - obake-devel
     - mppp
@@ -30,7 +29,6 @@ requirements:
     #- pybind11
 
   run:
-    - boost
     - python
 
 about:
