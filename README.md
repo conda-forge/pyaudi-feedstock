@@ -5,13 +5,11 @@ Home: http://darioizzo.github.io/audi/
 
 Package license: GPL v3 and LGPL v3
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyaudi-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python exposition of the audi C++ library: Algebra of Taylor truncated polynomials and a few algorithms useful for its applications (e.g. Automated differentiation, Differential Intelligence, Taylor Models, etc.)
 
-
-
-Current build status
+Current build status 
 ====================
 
 
