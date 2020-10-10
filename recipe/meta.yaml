@@ -30,6 +30,7 @@ requirements:
 
   run:
     - python
+    - numpy
 
 about:
   home: http://darioizzo.github.io/audi/
