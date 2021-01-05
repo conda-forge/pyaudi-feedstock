@@ -21,16 +21,18 @@ requirements:
     - ninja  # [win]
 
   host:
+    - pybind11
+    - pybind11-abi
     - python
     - eigen
     - obake-devel
     - mppp
     - audi {{ version }}
-    #- pybind11
 
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
+
 
 about:
   home: http://darioizzo.github.io/audi/
