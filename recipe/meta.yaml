@@ -23,6 +23,7 @@ requirements:
   host:
     - pybind11
     - pybind11-abi
+    - boost-cpp
     - python
     - eigen
     - obake-devel
@@ -31,6 +32,7 @@ requirements:
 
   run:
     - python
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
 
 
