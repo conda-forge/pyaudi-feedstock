@@ -2,9 +2,11 @@
 
 mkdir build
 cd build
-export PYAUDI_BUILD_DIR=`pwd`
 
-if [[ "$target_platform" == linux-64 ]]; then
+if [[ "$target_platform" == osx-* ]]; then
+    # Workarounds for missing C++17 features.
+    export CXXFLAGS="$CXXFLAGS -D_LIBCPP_DISABLE_AVAILABILITY -fno-aligned-allocation"
+else
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
