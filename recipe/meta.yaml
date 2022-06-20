@@ -18,8 +18,6 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make       # [unix]
-    - clang      # [win]
-    - ninja      # [win]
 
   host:
     - pybind11

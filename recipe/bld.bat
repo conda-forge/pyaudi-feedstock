@@ -1,20 +1,18 @@
 mkdir build
 cd build
-SET PYAUDI_BUILD_DIR=%cd%
 
 cmake ^
-    -G "Ninja" ^
-    -DCMAKE_C_COMPILER=clang-cl ^
-    -DCMAKE_CXX_COMPILER=clang-cl ^
-    -DBoost_NO_BOOST_CMAKE=ON ^
+    -G "Visual Studio 16 2019" -A x64 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+    -DBoost_NO_BOOST_CMAKE=ON ^
     -DAUDI_BUILD_TESTS=no ^
     -DAUDI_BUILD_AUDI=no ^
     -DAUDI_BUILD_PYAUDI=yes ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
 
-cmake --build . -- -v
+cmake --build . --config Release
 
-cmake --build . --target install
+cmake --build . --config Release --target install
+
