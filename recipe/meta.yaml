@@ -9,7 +9,7 @@ source:
   sha256: 4888205cfc7c8ffe15485b90d151cf6f296fc65c58d3c92ba57da8ab43c17279
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<36]
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - ninja      # [win]
 
   host:
+    - libabseil
     - pybind11
     - pybind11-abi
     - boost-cpp
@@ -35,6 +36,7 @@ requirements:
     - python
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
+    - libabseil
 
 
 about:
