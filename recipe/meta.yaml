@@ -35,7 +35,6 @@ requirements:
     - python
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
-    - libabseil
 
 
 about:
