@@ -10,7 +10,7 @@ else
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
-cmake \
+cmake ${CMAKE_ARGS} \
     -DBoost_NO_BOOST_CMAKE=ON \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
