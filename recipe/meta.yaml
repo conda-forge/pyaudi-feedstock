@@ -37,6 +37,8 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+  run_constrained:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET }}  # [osx and x86_64]
 
 
 about:
