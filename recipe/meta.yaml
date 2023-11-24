@@ -9,7 +9,7 @@ source:
   sha256: 4888205cfc7c8ffe15485b90d151cf6f296fc65c58d3c92ba57da8ab43c17279
 
 build:
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
     - libabseil
     - pybind11
     - pybind11-abi
-    - boost-cpp
+    - libboost-devel
     - python
     - eigen
     - obake-devel
@@ -36,7 +36,6 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
 
 
