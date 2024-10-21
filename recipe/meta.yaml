@@ -30,6 +30,7 @@ requirements:
     - pybind11-abi
     - libboost-devel
     - python
+    - setuptools
     - eigen
     - obake-devel
     - mppp
