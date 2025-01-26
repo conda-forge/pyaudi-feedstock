@@ -24,6 +24,10 @@ libboost_devel:
 - '1.86'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+mppp:
+- '2.0'
+obake_devel:
+- '0.9'
 pin_run_as_build:
   python:
     min_pin: x.x
