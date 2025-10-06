@@ -5,6 +5,7 @@ mkdir build
 cd build
 SET PYAUDI_BUILD_DIR=%cd%
 
+REM Remove extra DCMAKE_CXX_FLAGS flags upon next release (they're now added upstream v1.11)
 cmake ^
     -G "Visual Studio 17 2022" ^
     -A x64 ^
