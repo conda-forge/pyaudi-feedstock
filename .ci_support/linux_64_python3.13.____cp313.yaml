@@ -19,7 +19,7 @@ docker_image:
 libabseil:
 - '20250512'
 libboost_devel:
-- '1.86'
+- '1.88'
 mppp:
 - '2.0'
 obake_devel:
@@ -37,5 +37,3 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - channel_sources
