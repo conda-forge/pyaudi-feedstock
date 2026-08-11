@@ -11,7 +11,7 @@ cxx_compiler:
 libabseil:
 - '20260526'
 libboost_devel:
-- '1.88'
+- '1.90'
 mppp:
 - '2.0'
 obake_devel:
